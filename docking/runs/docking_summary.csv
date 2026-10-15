@@ -1,0 +1,1 @@
+run_id,ligand_id,ligand_file,receptor_id,vina_version,seed,affinity_kcal_mol,rmsd_lb,rmsd_ub
