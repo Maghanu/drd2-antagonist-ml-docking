@@ -5,6 +5,10 @@ standardized structures, and derived fingerprints in `data/processed/`.
 Never silently replace a source file; if a new export is retrieved, retain its
 retrieval details and distinguish it from earlier versions.
 
+Store unmodified experimental crystal structures under
+`data/raw/crystal_structures/`. Keep repaired, protonated, or otherwise edited
+structures outside the raw-data folder and document their derivation.
+
 ## Planned source
 
 - **Source:** ChEMBL (https://www.ebi.ac.uk/chembl/)
