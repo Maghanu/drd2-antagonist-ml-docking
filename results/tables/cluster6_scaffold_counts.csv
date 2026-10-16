@@ -1,0 +1,8 @@
+scaffold_smiles,compound_count,scaffold_label
+O=c1c(CCN2CCN(c3cccc4sccc34)CC2)cnc2n1CCCC2,7,O=c1c(CCN2CCN(c3cccc4sccc34)CC2)cnc2n1CCCC2
+O=c1c(CCN2CCC(c3cccc4sccc34)CC2)cnc2n1CCCC2,2,O=c1c(CCN2CCC(c3cccc4sccc34)CC2)cnc2n1CCCC2
+O=C1CCCn2c1ncc(CCN1CCN(c3cccc4sccc34)CC1)c2=O,1,O=C1CCCn2c1ncc(CCN1CCN(c3cccc4sccc34)CC1)c2=O
+O=c1c(CCN2CCC(c3noc4ccccc34)CC2)cnc2n1CCCC2,1,O=c1c(CCN2CCC(c3noc4ccccc34)CC2)cnc2n1CCCC2
+O=c1c(CCN2CCN(c3cccc4c3CCS4)CC2)cnc2n1CCCC2,1,O=c1c(CCN2CCN(c3cccc4c3CCS4)CC2)cnc2n1CCCC2
+O=c1c(CCN2CCN(c3cccc4sccc34)CC2)cnc2n1CCC=C2,1,O=c1c(CCN2CCN(c3cccc4sccc34)CC2)cnc2n1CCC=C2
+O=c1c(CCN2CCN(c3cncc4sccc34)CC2)cnc2n1CCCC2,1,O=c1c(CCN2CCN(c3cncc4sccc34)CC2)cnc2n1CCCC2
