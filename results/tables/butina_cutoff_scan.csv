@@ -1,0 +1,6 @@
+cutoff,n_clusters,singletons,clusters_gt5,largest_cluster
+0.2,335,275,3,8
+0.3,246,164,12,11
+0.4,178,108,18,30
+0.5,131,75,22,60
+0.6,95,53,19,90
