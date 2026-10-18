@@ -1,14 +1,11 @@
-# Raw crystal structures
+# Raw DRD2 crystal structures
 
-Store downloaded, unmodified experimental crystal-structure files in this
-folder (for example, PDB or mmCIF files). Keep one copy per source structure
-and record its PDB ID, download date, source URL, and checksum. Do not overwrite
-the original structure with prepared or edited coordinates.
+This folder preserves source crystal-structure files unchanged. In this
+project, the unmodified PDBe 6CM4 structure (`6cm4.mmcif`) provides the
+co-crystallized risperidone coordinates used to define the docking box in
+[`src/06_docking.ipynb`](../../../src/06_docking.ipynb).
 
-Put repaired, protonated, ion-modified, or docking-ready structures in a
-separate derived/prepared location, and document each change so the raw
-experimental structure remains reproducible.
-
-The docking workflow uses the unmodified PDBe 6CM4 structure at
-`6cm4.mmcif` as the source record for the co-crystallized risperidone
-coordinates used to define the docking box.
+Keep repaired, protonated, ion-modified, or otherwise prepared structures in
+the processed-data or docking-preparation locations, never over the raw
+structure. When adding or replacing a source structure, document its source,
+PDB ID, retrieval date, URL, and checksum.
