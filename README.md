@@ -58,7 +58,7 @@ ChEMBL DRD2 IC50 data
 data/
   raw/              Source activity and ZINC22 compound tables
   processed/        Molecular fingerprint tables
-src/                Numbered analysis notebooks and shared utilities
+src/                Numbered analysis notebooks; utils.py is an unused stub
 Workflow/           Earlier workflow notebook
 models/             Saved regression model
 docking/            Receptor preparation, ligands, poses, logs, and summaries
@@ -71,21 +71,26 @@ docs/               Additional project notes
 ## Running the notebooks
 
 Run the notebooks in order where their outputs are inputs to later stages.
-Open the repository folder in VS Code, select a Python kernel with the
-notebook's dependencies, and run the cells from top to bottom. The docking
-notebook requires AutoDock Vina and Meeko; on Windows, use a Linux kernel in
-WSL 2. See [`docking/README.md`](docking/README.md) for its environment and
-structure-preparation details.
+The pinned `requirements.txt` covers the core prediction and analysis
+notebooks; docking also requires the Conda packages documented in
+[`docking/README.md`](docking/README.md). Notebook metadata records that past
+stages were run under different Python versions, so use the documented
+Python 3.12 environment for new runs. On Windows, run docking with a Linux
+kernel in WSL 2.
 
 Outputs are written under `data/processed/`, `models/`, `docking/`, and
 `results/`. Do not overwrite raw inputs when regenerating derived data.
 
 ## Interpretation and reproducibility
 
-Record the data source, query, retrieval date, filters, software versions, and
-model settings when regenerating results. Keep raw data distinct from processed
-data. Review docked poses and validate the approach against appropriate
-reference compounds before relying on docking rankings. See
+The repository does not contain the reference-control docking/MD workflows or
+the manuscript figures and comparisons cited in the report. Do not assume
+those analyses can be reproduced from the checked-in batch docking code.
+Known provenance gaps and the receptor-method statement supported by the
+notebook are listed in [`docs/reproducibility.md`](docs/reproducibility.md).
+Keep raw data distinct from processed data. Review docked poses and validate
+the approach against appropriate reference compounds before relying on
+docking rankings. See
 [`data/README.md`](data/README.md) for data provenance and
 [`models/README.md`](models/README.md) for the saved model.
 

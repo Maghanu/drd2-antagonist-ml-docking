@@ -1,15 +1,14 @@
 # Processed DRD2 crystal structures
 
-`6CM4_Na.mmcif` is the processed DRD2 structure used as the receptor source
-for the project's AutoDock Vina workflow in
-[`src/06_docking.ipynb`](../../../src/06_docking.ipynb). It derives from 6CM4
-and differs from the unmodified source: one Na+ ion was artificially added at
-(5.6091423, 2.42903519, 3.75315261) angstrom, and crystallographic oleic-acid
-molecules (component `OLA`) were omitted.
+`6CM4_Na.mmcif` is a separately processed DRD2 structure. It derives from
+6CM4 and differs from the unmodified source: one Na+ ion was artificially
+added at (5.6091423, 2.42903519, 3.75315261) angstrom, and crystallographic
+oleic-acid molecules (component `OLA`) were omitted. **It is not used by the
+current docking notebook.**
 
-The structure contains the T4 lysozyme fusion in the experimental construct;
-the docking notebook extracts the DRD2 regions and omits the fusion when
-preparing the receptor. The raw 6CM4 file at
-`data/raw/crystal_structures/6cm4.mmcif` is used for the co-crystallized
-risperidone coordinates that define the docking box. Keep the raw structure
-unchanged and document further processing separately.
+The current workflow instead downloads 6CM4 from RCSB and extracts only
+DRD2 `ATOM` records, excluding `HETATM` records and the T4 lysozyme fusion.
+The notebook uses co-crystallized risperidone from that downloaded CIF to
+define the docking box. Keep this separate processed file and the raw
+structure unchanged, and do not describe either as the receptor input to the
+current notebook.

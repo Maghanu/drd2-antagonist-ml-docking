@@ -15,24 +15,37 @@ Each set is run and reported separately so that rankings can be compared.
 
 ## Receptor and docking box
 
-The receptor is prepared from the 6CM4 DRD2 structure. Receptor preparation
-keeps the DRD2 regions and excludes the T4 lysozyme fusion. The co-crystallized
-risperidone coordinates define the docking box. The raw structure is preserved
-at `data/raw/crystal_structures/6cm4.mmcif`; the processed receptor source is
-`data/processed/crystal_structures/6CM4_Na.mmcif`. That processed structure
-includes an artificially added Na+ ion and omits crystallographic oleic-acid
-molecules. Further receptor-repair and PDBQT preparation are performed by the
-notebook and cached under `docking/prepared/6CM4/`.
+The reproducible workflow in `src/06_docking.ipynb` downloads **RCSB PDB
+6CM4** from `https://files.rcsb.org/download/6CM4.cif`. It keeps only `ATOM`
+records for DRD2 sequence positions 1–188 and 349–430, excluding the T4
+lysozyme fusion and all `HETATM` records (including ions). Therefore, the
+receptor used by this notebook has **no artificially added sodium ion**.
+Co-crystallized risperidone (component `8NU`) from that downloaded CIF defines
+the docking-box center; the box receives 8 Å padding in each dimension.
+PDBFixer repairs missing atoms, OpenMM performs restrained minimization, and
+Meeko prepares the receptor PDBQT, cached under `docking/prepared/6CM4/`.
+
+`data/processed/crystal_structures/6CM4_Na.mmcif` is a separate processed
+structure and is **not** an input to notebook 06. The repository does not
+contain Figure 4 or its report, the reference-control docking runs, or any
+rows in `docking/runs/docking_summary.csv`; it is therefore not possible to
+verify from the repository which receptor was used for Figure 4. If Figure 4
+was made from notebook 06's committed workflow/results, its Methods should
+describe the RCSB 6CM4 receptor without added sodium. If it used another
+receptor, record that receptor's source and preparation separately.
 
 ## Environment and execution
 
-The workflow uses AutoDock Vina's Python bindings, Meeko, RDKit, Biopython,
-PDBFixer, and OpenMM. On Windows, use a Linux kernel in WSL 2; Linux and macOS
-kernels are also accepted. From the repository root, create and register an
-environment with:
+The environment snapshot recorded on 2026-10-18 uses Python 3.12.15, Vina
+1.2.7, Meeko 0.8.0, RDKit 2026.03.1, Biopython 1.88, PDBFixer 1.12, and
+OpenMM 8.6.1. These are versions in the available `drd2-vina-py312`
+environment, not a recovered package manifest from every historical docking
+run; see [`docs/reproducibility.md`](../docs/reproducibility.md). On Windows,
+use a Linux kernel in WSL 2; Linux and macOS kernels are also accepted. From
+the repository root, create and register an environment with:
 
 ```bash
-conda create -n drd2-vina-py312 -c conda-forge python=3.12 meeko=0.8.0 vina rdkit biopython pdbfixer openmm pandas matplotlib scipy jupyter
+conda create -n drd2-vina-py312 -c conda-forge python=3.12.15 meeko=0.8.0 vina=1.2.7 rdkit=2026.03.1 biopython=1.88 pdbfixer=1.12 openmm=8.6.1 pandas=3.0.6 matplotlib=3.11.2 scipy=1.18.1 jupyter=1.1.1 ipykernel=7.4.0
 conda activate drd2-vina-py312
 python -m ipykernel install --user --name drd2-vina-py312 --display-name "Python (drd2-vina-py312)"
 ```

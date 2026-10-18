@@ -33,6 +33,13 @@ Do not edit raw input files in place when regenerating analyses.
 
 ## Provenance and scientific interpretation
 
+The current source queries and missing provenance fields are listed in
+[`docs/reproducibility.md`](../docs/reproducibility.md). In particular, the
+checked-in ChEMBL activity table does not record the ChEMBL release or access
+date, and the ZINC22 files do not record their release/retrieval dates or
+complete queries. Their first Git commit dates are not substitutes for
+retrieval dates.
+
 When retrieving or replacing a source dataset, record its source URL or query,
 retrieval date, version, and checksum. Document the filtering and
 standardization steps used to produce the curated pIC50 data, including assay
@@ -43,3 +50,5 @@ IC50 is an assay measurement, not a mechanism label. Do not infer antagonism
 from potency alone; retain assay and mechanism information wherever available.
 ZINC22 predictions are model estimates, and docking scores are approximate
 computational scores. Neither substitutes for experimental validation.
+The ZINC22 scaffold set was selected by similarity search; do not describe
+that alone as demonstrated scaffold hopping.
