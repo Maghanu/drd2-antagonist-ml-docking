@@ -1,10 +1,10 @@
 # Raw DRD2 crystal structures
 
-This folder preserves source crystal-structure files unchanged. The current
-docking notebook downloads RCSB 6CM4 directly at runtime; it does not read the
-PDBe `6cm4.mmcif` in this folder. That local source file is retained for
-provenance and should not be confused with the input used by the checked-in
-notebook.
+This folder preserves source crystal-structure files unchanged. The docking
+notebook reads the local PDBe `6cm4.mmcif` only to obtain co-crystallized
+risperidone coordinates for defining the docking box. The receptor atoms and
+Na+ ion come from `data/processed/crystal_structures/6CM4_Na.mmcif`; the raw
+file is not downloaded or used as the receptor.
 
 Keep repaired, protonated, ion-modified, or otherwise prepared structures in
 the processed-data or docking-preparation locations, never over the raw
