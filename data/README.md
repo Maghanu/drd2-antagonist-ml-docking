@@ -18,6 +18,8 @@ crystal structure for docking. See the repository
   scaffold/similarity search.
 - `raw/random_zinc22.csv` contains 10,000 ZINC22 compounds from a random
   search.
+- `raw/5ht2c_docking_ligands.csv` contains the five selected ZINC22 hits for
+  5-HT2C docking and the ritanserin and risperidone reference ligands.
 - `processed/DopamineD2_maccs.csv`,
   `processed/DopamineD2_morgan2.csv`, and
   `processed/DopamineD2_morgan3.csv` contain MACCS, Morgan-radius-2, and

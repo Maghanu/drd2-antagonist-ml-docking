@@ -16,6 +16,14 @@ Each set is run and reported separately so that rankings can be compared.
 docks every named SMILES in `data/raw/comparison_smiles` using the same
 6CM4_Na receptor, box, and Vina settings as those two batches.
 
+[`src/08_docking_6bqh.ipynb`](../src/08_docking_6bqh.ipynb) is a separate
+5-HT2C workflow. It docks only the five selected hits and the Ritanserin and
+Risperidone reference ligands listed in
+`data/raw/5ht2c_docking_ligands.csv` against the local 6QBH structure. The
+co-crystallized `E2J` ligand defines the site box and is excluded from the
+prepared receptor. This notebook does not read the ZINC prediction libraries,
+predicted pIC50 values, or DRD2 docking rankings.
+
 ## Receptor and docking box
 
 The receptor in `src/06_docking.ipynb` is read from the committed local file
@@ -82,6 +90,8 @@ Select the `Python (drd2-vina-py312)` kernel in VS Code and run
   `results/tables/top100_docking_results_random.csv`.
 - Comparison-compound poses and scores: `docking/runs/comparison_smiles/` and
   `results/tables/comparison_docking_results.csv`.
+- 5-HT2C selected-ligand poses and scores: `docking/runs/5ht2c_6qbh/` and
+  `results/tables/5ht2c_docking_results_6qbh.csv`.
 - Model-versus-docking plots:
   `results/figures/ml_vs_docking_scaffold.png` and
   `results/figures/ml_vs_docking_random.png`.
