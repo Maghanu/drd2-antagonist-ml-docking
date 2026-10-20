@@ -1,0 +1,2 @@
+comparison,mean_difference,mean_difference_95ci_low,mean_difference_95ci_high,welch_t,welch_df,welch_p_value,mann_whitney_u,mann_whitney_p_value,rank_biserial_effect,cohens_d
+Scaffold minus random predicted pIC50,0.33302747522694,0.3145841920211643,0.3514707584327157,35.41507421356303,1763.1340001529147,5.786156368511907e-208,13168349.0,0.0,0.5981006067961165,1.562639054247374
