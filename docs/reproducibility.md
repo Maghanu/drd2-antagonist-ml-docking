@@ -20,32 +20,39 @@ when the source data are next retrieved.
 
 ## Receptor used by the checked-in docking workflow
 
-Notebook 06 downloads
-[`6CM4.cif`](https://files.rcsb.org/download/6CM4.cif) from RCSB at runtime.
-The receptor writer accepts only `ATOM` records for DRD2 sequence positions
-1–188 and 349–430. It omits `HETATM` records, including ions and the
-co-crystallized ligand. The box is defined from risperidone (component `8NU`)
-coordinates in that same CIF, with 8 Å padding. The committed
-`docking/prepared/6CM4/drd2.pdbqt` contains no sodium. The separate
-`data/processed/crystal_structures/6CM4_Na.mmcif` is not used by notebook 06.
+Notebook 06 reads the receptor from the committed local
+`data/processed/crystal_structures/6CM4_Na.mmcif`; it performs no structure
+download. It retains DRD2 `ATOM` records at author residue numbers 35–222 and
+364–442, excluding the T4 lysozyme fusion and unrelated records. The Na+ ion
+from this processed file is included in the final Vina receptor PDBQT. PDBFixer
+and restrained OpenMM minimization are applied to protein atoms; the sodium
+is added to the PDBQT after that preparation, rather than being minimized or
+parameterized by the protein force field.
+
+Because the processed receptor file omits risperidone, notebook 06 reads
+`data/raw/crystal_structures/6cm4.mmcif` locally only to get the native
+risperidone (component `8NU`) coordinates for the docking box. The box has 8 Å
+padding in each dimension. Both files are committed inputs. The prepared
+receptor cache is `docking/prepared/6CM4_Na/`.
 
 Suggested Methods wording for analyses produced by notebook 06:
 
-> The DRD2 receptor was prepared from RCSB PDB entry 6CM4 downloaded by the
-> workflow. Only DRD2 `ATOM` records corresponding to sequence positions
-> 1–188 and 349–430 were retained; heteroatoms, including ions, and the T4
-> lysozyme fusion were excluded. Co-crystallized risperidone (component 8NU)
-> coordinates from the downloaded structure defined the docking box, with
-> 8 Å padding. Missing atoms were rebuilt with PDBFixer, the receptor was
-> minimized with positional restraints in OpenMM, and Meeko generated the
-> receptor PDBQT.
+> The DRD2 receptor was prepared from the local processed 6CM4_Na mmCIF file.
+> DRD2 `ATOM` records at author residue numbers 35–222 and 364–442 were
+> retained, excluding the T4 lysozyme fusion. The structure's Na+ ion was
+> included in the final receptor PDBQT after protein preparation. Native
+> risperidone (component 8NU) coordinates from the local raw 6CM4 mmCIF were
+> used only to define the docking box, with 8 Å padding. Missing protein atoms
+> were rebuilt with PDBFixer, the protein was minimized with positional
+> restraints in OpenMM, and Meeko generated the protein receptor PDBQT.
 
 The report and its Figure 4 are not present in this repository, and
 `docking/runs/docking_summary.csv` contains only its header. Thus the exact
 receptor and procedures behind Figure 4 and the unimplemented control docking
 and MD analyses cannot be verified here. Use the Methods wording above only
-if Figure 4 was generated from this notebook's workflow; otherwise document
-the actual receptor and method used for the figure.
+if Figure 4 was generated from the current notebook workflow. Existing docking
+scores and figures should be regenerated before describing them as results
+from this Na+-containing receptor.
 
 ## Software environment records
 
