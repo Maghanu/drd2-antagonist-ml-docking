@@ -19,24 +19,24 @@ follow-up, not as experimental findings.
 
 The numbered notebooks in `src/` form the main analysis:
 
-1. [`01_ic50.ipynb`](src/01_ic50.ipynb) retrieves DRD2 bioactivity records from
+1. [`Group6_codeACMDD_step01_ic50.ipynb`](src/Group6_codeACMDD_step01_ic50.ipynb) retrieves DRD2 bioactivity records from
    ChEMBL, standardizes eligible IC50 measurements to pIC50, and writes the
    curated compound table.
-2. [`02_clustering.ipynb`](src/02_clustering.ipynb) groups compounds by
+2. [`Group6_codeACMDD_step02_clustering.ipynb`](src/Group6_codeACMDD_step02_clustering.ipynb) groups compounds by
    molecular-fingerprint similarity and saves cluster summaries and figures.
    It writes the selected cluster-6 molecules to an SDF for follow-on analysis.
-3. [`03_scaffold.ipynb`](src/03_scaffold.ipynb) analyzes Bemis-Murcko scaffolds
+3. [`Group6_codeACMDD_step03_scaffold.ipynb`](src/Group6_codeACMDD_step03_scaffold.ipynb) analyzes Bemis-Murcko scaffolds
    in that selected cluster.
-4. [`04_ml.ipynb`](src/04_ml.ipynb) generates MACCS and Morgan fingerprints,
+4. [`Group6_codeACMDD_step04_ml.ipynb`](src/Group6_codeACMDD_step04_ml.ipynb) generates MACCS and Morgan fingerprints,
    benchmarks regression models for pIC50, evaluates them using a single split
    and cross-validation, and saves the selected model.
-5. [`05_pIC50prediction.ipynb`](src/05_pIC50prediction.ipynb) applies the saved
+5. [`Group6_codeACMDD_step05.ipynb`](src/Group6_codeACMDD_step05.ipynb) applies the saved
    Morgan-radius-2 model to two ZINC22 sets: 1,648 scaffold-similarity
    compounds and 10,000 random compounds.
-6. [`06_docking.ipynb`](src/06_docking.ipynb) docks the top 100 predicted
+6. [`Group6_codeACMDD_step06_docking_6CM4.ipynb`](src/Group6_codeACMDD_step06_docking_6CM4.ipynb) docks the top 100 predicted
    compounds from each ZINC22 set to DRD2 and compares model and docking
    rankings.
-7. [`07_unwanted-substructures.ipynb`](src/07_unwanted-substructures.ipynb)
+7. [`Group6_codeACMDD_step07_unwanted-substructures.ipynb`](src/Group6_codeACMDD_step07_unwanted-substructures.ipynb)
    screens **only the scaffold set's successfully docked top-100 shortlist**
    for PAINS and unwanted substructures using RDKit catalogs. It does not
    screen the full scaffold set or the random set.
