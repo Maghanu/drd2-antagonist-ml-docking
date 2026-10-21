@@ -11,10 +11,10 @@ does not establish that a compound binds DRD2 or acts as an antagonist.
 - `final_svr_morgan2.joblib` is the selected support-vector regression (SVR)
   model trained with Morgan radius-2 fingerprints.
 - The model was selected by the evaluation workflow in
-  [`src/04_ml.ipynb`](../src/04_ml.ipynb), which compares random-forest, SVR,
+  [`src/Group6_codeACMDD_step04_ml.ipynb`](../src/Group6_codeACMDD_step04_ml.ipynb), which compares random-forest, SVR,
   and ANN regressors across MACCS, Morgan-radius-2, and Morgan-radius-3
   representations.
-- [`src/05_pIC50prediction.ipynb`](../src/05_pIC50prediction.ipynb) loads the
+- [`src/Group6_codeACMDD_step05.ipynb`](../src/Group6_codeACMDD_step05.ipynb) loads the
   model to predict pIC50 for scaffold-similarity and random ZINC22 collections.
 
 The model expects the same fingerprint representation used during training.

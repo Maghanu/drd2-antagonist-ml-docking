@@ -9,8 +9,8 @@ date.
 
 | Dataset | Recorded source and query | Release/retrieval provenance |
 | --- | --- | --- |
-| DRD2 activity table (`data/raw/drd2_curated_compounds.csv`, 435 compounds) | `src/01_ic50.ipynb` queries the ChEMBL REST API for UniProt `P14416`, selects target `CHEMBL217`, and requests `IC50`, exact relation `=`, binding assay type `B`; it then retains values in nM. | ChEMBL release and API access date were not saved in the notebook or CSV. The file was in Git by 2026-10-16; that is not its retrieval date. |
-| Scaffold collection (`data/raw/scaffold_zinc22.csv`, 1,648 compounds) | ZINC22 similarity search; `src/05_pIC50prediction.ipynb` describes default similarity-search settings. | ZINC22 release/revision, full query parameters/reference, and retrieval date were not saved. The file was in Git by 2026-10-16; that is not its retrieval date. |
+| DRD2 activity table (`data/raw/drd2_curated_compounds.csv`, 435 compounds) | `src/Group6_codeACMDD_step01_ic50.ipynb` queries the ChEMBL REST API for UniProt `P14416`, selects target `CHEMBL217`, and requests `IC50`, exact relation `=`, binding assay type `B`; it then retains values in nM. | ChEMBL release and API access date were not saved in the notebook or CSV. The file was in Git by 2026-10-16; that is not its retrieval date. |
+| Scaffold collection (`data/raw/scaffold_zinc22.csv`, 1,648 compounds) | ZINC22 similarity search; `src/Group6_codeACMDD_step05.ipynb` describes default similarity-search settings. | ZINC22 release/revision, full query parameters/reference, and retrieval date were not saved. The file was in Git by 2026-10-16; that is not its retrieval date. |
 | Random collection (`data/raw/random_zinc22.csv`, 10,000 compounds) | ZINC22 random-search query; the exact query is not included in the repository. | ZINC22 release/revision and retrieval date were not saved. The file was in Git by 2026-10-16; that is not its retrieval date. |
 
 The existing data files do not contain enough metadata to reconstruct the
@@ -60,11 +60,11 @@ Notebook kernel metadata is not consistent across saved notebooks:
 
 | Notebook(s) | Python version in saved metadata |
 | --- | --- |
-| `src/01_ic50.ipynb` | 3.14.7 |
-| `src/02_clustering.ipynb`–`src/05_pIC50prediction.ipynb` | 3.12.2 |
-| `src/06_docking.ipynb`–`src/07_unwanted-substructures.ipynb` | 3.12.15 |
+| `src/Group6_codeACMDD_step01_ic50.ipynb` | 3.14.7 |
+| `src/Group6_codeACMDD_step02_clustering.ipynb`–`src/Group6_codeACMDD_step05.ipynb` | 3.12.2 |
+| `src/Group6_codeACMDD_step06_docking_6CM4.ipynb`–`src/Group6_codeACMDD_step07_unwanted-substructures.ipynb` | 3.12.15 |
 
-The `src/04_ml.ipynb` saved package-install output records these package
+The `src/Group6_codeACMDD_step04_ml.ipynb` saved package-install output records these package
 versions: RDKit 2026.3.6, scikit-learn 1.9.1, joblib 1.6.0, tqdm 4.70.0,
 Matplotlib 3.11.1, pandas 3.0.6, NumPy 2.5.3, and SciPy 1.18.1. This is
 captured setup output, not a complete lockfile for every notebook.

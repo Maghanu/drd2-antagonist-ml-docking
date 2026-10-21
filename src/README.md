@@ -45,17 +45,13 @@ Vina score is worth.
 
 | Database | URL | Accessed | Used for |
 | --- | --- | --- | --- |
-| ChEMBL REST API (target `CHEMBL217`, UniProt `P14416`) | <https://www.ebi.ac.uk/chembl/api/data> | *(fill in release + date)* | DRD2 IC<sub>50</sub> bioactivities and 2D structures |
-| ZINC22 / SmallWorld similarity search | <https://cartblanche22.docking.org> | *(fill in date)* | 1,648-compound scaffold-similarity library |
-| ZINC22 random selection | <https://cartblanche22.docking.org> | *(fill in date)* | 10,000-compound random background library |
-| RCSB PDB — `6CM4` (DRD2, inactive, risperidone-bound) | <https://www.rcsb.org/structure/6CM4> | *(fill in date)* | Docking receptor and docking-box reference ligand |
-| RCSB PDB — `6BQH` (5-HT2C) | <https://www.rcsb.org/structure/6BQH> | *(fill in date)* | Off-target counter-screen receptor |
+| ChEMBL REST API (target `CHEMBL217`, UniProt `P14416`) | <https://www.ebi.ac.uk/chembl/api/data> | (20/10/2026) | DRD2 IC<sub>50</sub> bioactivities and 2D structures |
+| ZINC22 / SmallWorld similarity search | <https://cartblanche22.docking.org> | (20/10/2026) | 1,648-compound scaffold-similarity library |
+| ZINC22 random selection | <https://cartblanche22.docking.org> | (20/10/2026) | 10,000-compound random background library |
+| RCSB PDB — `6CM4` (DRD2, inactive, risperidone-bound) | <https://www.rcsb.org/structure/6CM4> | (20/10/2026) | Docking receptor and docking-box reference ligand |
+| RCSB PDB — `6BQH` (5-HT2C) | <https://www.rcsb.org/structure/6BQH> | (20/10/2026) | Off-target counter-screen receptor |
 
-> The ChEMBL release number and the retrieval dates of the ZINC22 and PDB files
-> were not recorded at the time of download; see
-> [`../docs/reproducibility.md`](../docs/reproducibility.md). Fill the table in
-> before submission, and record the release and access date whenever these
-> datasets are retrieved again. A Git commit date is not a retrieval date.
+
 
 ### Software and packages
 
@@ -126,16 +122,16 @@ Run the notebooks in this order; the outputs of each are the inputs of the next.
 
 | Step in the diagram | Notebook | Writes |
 | --- | --- | --- |
-| 1 — Curation and pIC<sub>50</sub> conversion | [`01_ic50.ipynb`](01_ic50.ipynb) | `data/raw/drd2_curated_compounds.csv` |
-| 2 — Fingerprint clustering | [`02_clustering.ipynb`](02_clustering.ipynb) | cluster tables and figures; `docking/ligands/molecule_set_cluster6.sdf` |
-| 3 — Scaffold extraction | [`03_scaffold.ipynb`](03_scaffold.ipynb) | `results/tables/cluster6_scaffold_*.csv` |
+| 1 — Curation and pIC<sub>50</sub> conversion | [`Group6_codeACMDD_step01_ic50.ipynb`](Group6_codeACMDD_step01_ic50.ipynb) | `data/raw/drd2_curated_compounds.csv` |
+| 2 — Fingerprint clustering | [`Group6_codeACMDD_step02_clustering.ipynb`](Group6_codeACMDD_step02_clustering.ipynb) | cluster tables and figures; `docking/ligands/molecule_set_cluster6.sdf` |
+| 3 — Scaffold extraction | [`Group6_codeACMDD_step03_scaffold.ipynb`](Group6_codeACMDD_step03_scaffold.ipynb) | `results/tables/cluster6_scaffold_*.csv` |
 | 4 — Scaffold-based similarity search | *external* (SmallWorld / ZINC22 web interface) | `data/raw/scaffold_zinc22.csv` |
-| Model training and cross-validation | [`04_ml.ipynb`](04_ml.ipynb) | fingerprint CSVs, `reg_results_*.csv`, `models/final_svr_morgan2.joblib` |
-| 5 — QSAR pIC<sub>50</sub> prediction | [`05_pIC50prediction.ipynb`](05_pIC50prediction.ipynb) | `results/tables/*_zinc22_predicted_pIC50.csv`, summary statistics |
-| 6 — Molecular docking (6CM4) | [`06_docking_6CM4.ipynb`](06_docking_6CM4.ipynb) | `results/tables/top100_docking_results_*.csv`, poses under `docking/runs/` |
-| Docking validation | [`06_docking-comparisons.ipynb`](06_docking-comparisons.ipynb) | `results/tables/comparison_docking_results.csv` |
-| 6 — Counter-screen (5-HT2C) | [`08_docking_6bqh.ipynb`](08_docking_6bqh.ipynb) | `results/tables/5ht2c_docking_results_6bqh.csv` |
-| 7 — PAINS / unwanted substructure filtering | [`07_unwanted-substructures.ipynb`](07_unwanted-substructures.ipynb) | filtered shortlist (99 PAINS-free, 91 Brenk-clean of 100) |
+| Model training and cross-validation | [`Group6_codeACMDD_step04_ml.ipynb`](Group6_codeACMDD_step04_ml.ipynb) | fingerprint CSVs, `reg_results_*.csv`, `models/final_svr_morgan2.joblib` |
+| 5 — QSAR pIC<sub>50</sub> prediction | [`Group6_codeACMDD_step05.ipynb`](Group6_codeACMDD_step05.ipynb) | `results/tables/*_zinc22_predicted_pIC50.csv`, summary statistics |
+| 6 — Molecular docking (6CM4) | [`Group6_codeACMDD_step06_docking_6CM4.ipynb`](Group6_codeACMDD_step06_docking_6CM4.ipynb) | `results/tables/top100_docking_results_*.csv`, poses under `docking/runs/` |
+| Docking validation | [`Group6_codeACMDD_step06_docking-comparisons.ipynb`](Group6_codeACMDD_step06_docking-comparisons.ipynb) | `results/tables/comparison_docking_results.csv` |
+| 6 — Counter-screen (5-HT2C) | [`Group6_codeACMDD_step08_docking_6BQH.ipynb`](Group6_codeACMDD_step08_docking_6BQH.ipynb) | `results/tables/5ht2c_docking_results_6bqh.csv` |
+| 7 — PAINS / unwanted substructure filtering | [`Group6_codeACMDD_step07_unwanted-substructures.ipynb`](Group6_codeACMDD_step07_unwanted-substructures.ipynb) | filtered shortlist (99 PAINS-free, 91 Brenk-clean of 100) |
 
 Steps 8, 9 and sanity check were performed in the group's separate working directory and are not reproducible from this folder.
 
