@@ -41,6 +41,20 @@ The numbered notebooks in `src/` form the main analysis:
    for PAINS and unwanted substructures using RDKit catalogs. It does not
    screen the full scaffold set or the random set.
 
+Additional docking analyses are available separately from the main sequence:
+
+- [`Group6_codeACMDD_step06_docking-comparisons.ipynb`](src/Group6_codeACMDD_step06_docking-comparisons.ipynb)
+  docks named reference compounds against DRD2 structure 6CM4_Na.
+- [`Group6_codeACMDD_step06_active.ipynb`](src/Group6_codeACMDD_step06_active.ipynb)
+  compares the five selected hits and risperidone in inactive 6CM4_Na and
+  active 9BS9 DRD2 structures.
+- [`Group6_codeACMDD_step08_docking_6BQh.ipynb`](src/Group6_codeACMDD_step08_docking_6BQh.ipynb)
+  docks the selected hits and reference ligands against 5-HT2C structure 6BQH.
+
+See [`docking/README.md`](docking/README.md) and
+[`docs/reproducibility.md`](docs/reproducibility.md) for their inputs,
+settings, outputs, and limitations.
+
 The intended data flow is:
 
 ```text
@@ -58,39 +72,47 @@ ChEMBL DRD2 IC50 data
 data/
   raw/              Source activity and ZINC22 compound tables
   processed/        Molecular fingerprint tables
-src/                Numbered analysis notebooks; utils.py is an unused stub
-Workflow/           Earlier workflow notebook
+src/                Numbered analysis notebooks
 models/             Saved regression model
 docking/            Receptor preparation, ligands, poses, logs, and summaries
 results/
+  presentation_figures/ Figures prepared for project presentations
   figures/          Cluster, model-evaluation, and docking-comparison figures
   tables/           Cluster summaries, predictions, docking scores, and metrics
 docs/               Additional project notes
+requirements.txt    Pinned dependencies for core analysis
 ```
 
 ## Running the notebooks
 
 Run the notebooks in order where their outputs are inputs to later stages.
-The pinned `requirements.txt` covers the core prediction and analysis
-notebooks; docking also requires the Conda packages documented in
-[`docking/README.md`](docking/README.md). Notebook metadata records that past
-stages were run under different Python versions, so use the documented
-Python 3.12 environment for new runs. On Windows, run docking with a Linux
-kernel in WSL 2.
+The pinned core-analysis dependencies are in the repository-root
+[`requirements.txt`](requirements.txt). From the repository root, install
+them with:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Docking additionally requires the Conda packages documented in
+[`docking/README.md`](docking/README.md). Notebook metadata records runs under
+different Python versions; use the documented Python 3.12 environment for
+new runs. On Windows, run docking with a Linux kernel in WSL 2.
 
 Outputs are written under `data/processed/`, `models/`, `docking/`, and
 `results/`. Do not overwrite raw inputs when regenerating derived data.
 
 ## Interpretation and reproducibility
 
-The repository does not contain the reference-control docking/MD workflows or
-the manuscript figures and comparisons cited in the report. Do not assume
-those analyses can be reproduced from the checked-in batch docking code.
-Known provenance gaps and the receptor-method statement supported by the
-notebook are listed in [`docs/reproducibility.md`](docs/reproducibility.md).
-Keep raw data distinct from processed data. Review docked poses and validate
-the approach against appropriate reference compounds before relying on
-docking rankings. See
+The repository includes reference-compound docking, a paired active/inactive
+DRD2 comparison, and a selected-ligand 5-HT2C docking workflow. These
+computational workflows do not establish experimental affinity or antagonist
+activity, and they do not reproduce molecular-dynamics analyses. The report
+and its figures are not included, so their exact inputs and procedures cannot
+be verified here. Known provenance gaps are listed in
+[`docs/reproducibility.md`](docs/reproducibility.md). Keep raw data distinct
+from processed data. Review docked poses and validate the approach against
+appropriate reference compounds before relying on docking rankings. See
 [`data/README.md`](data/README.md) for data provenance and
 [`models/README.md`](models/README.md) for the saved model.
 
