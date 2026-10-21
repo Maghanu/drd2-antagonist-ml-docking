@@ -46,11 +46,11 @@ Vina score is worth.
 
 | Database | URL | Accessed | Used for |
 | --- | --- | --- | --- |
-| ChEMBL REST API (target `CHEMBL217`, UniProt `P14416`) | <https://www.ebi.ac.uk/chembl/api/data> | (20/10/2026) | DRD2 IC<sub>50</sub> bioactivities and 2D structures |
-| ZINC22 / SmallWorld similarity search | <https://cartblanche22.docking.org> | (20/10/2026) | 1,648-compound scaffold-similarity library |
-| ZINC22 random selection | <https://cartblanche22.docking.org> | (20/10/2026) | 10,000-compound random background library |
-| RCSB PDB — `6CM4` (DRD2, inactive, risperidone-bound) | <https://www.rcsb.org/structure/6CM4> | (20/10/2026) | Docking receptor and docking-box reference ligand |
-| RCSB PDB — `6BQH` (5-HT2C) | <https://www.rcsb.org/structure/6BQH> | (20/10/2026) | Off-target counter-screen receptor |
+| ChEMBL REST API (target `CHEMBL217`, UniProt `P14416`) | <https://www.ebi.ac.uk/chembl/api/data> |  DRD2 IC<sub>50</sub> bioactivities and 2D structures |
+| ZINC22 / SmallWorld similarity search | <https://cartblanche22.docking.org> |  1,648-compound scaffold-similarity library |
+| ZINC22 random selection | <https://cartblanche22.docking.org> |  10,000-compound random background library |
+| RCSB PDB — `6CM4` (DRD2, inactive, risperidone-bound) | <https://www.rcsb.org/structure/6CM4> |  Docking receptor and docking-box reference ligand |
+| RCSB PDB — `6BQH` (5-HT2C) | <https://www.rcsb.org/structure/6BQH> | Off-target counter-screen receptor |
 
 
 
