@@ -49,7 +49,7 @@ Vina score is worth.
 | ZINC22 / SmallWorld similarity search | <https://cartblanche22.docking.org> | *(fill in date)* | 1,648-compound scaffold-similarity library |
 | ZINC22 random selection | <https://cartblanche22.docking.org> | *(fill in date)* | 10,000-compound random background library |
 | RCSB PDB — `6CM4` (DRD2, inactive, risperidone-bound) | <https://www.rcsb.org/structure/6CM4> | *(fill in date)* | Docking receptor and docking-box reference ligand |
-| RCSB PDB — `6BQH` / `6QBH` (5-HT2C) | <https://www.rcsb.org/structure/6BQH> | *(fill in date)* | Off-target counter-screen receptor |
+| RCSB PDB — `6BQH` (5-HT2C) | <https://www.rcsb.org/structure/6BQH> | *(fill in date)* | Off-target counter-screen receptor |
 
 > The ChEMBL release number and the retrieval dates of the ZINC22 and PDB files
 > were not recorded at the time of download; see
@@ -134,7 +134,7 @@ Run the notebooks in this order; the outputs of each are the inputs of the next.
 | 5 — QSAR pIC<sub>50</sub> prediction | [`05_pIC50prediction.ipynb`](05_pIC50prediction.ipynb) | `results/tables/*_zinc22_predicted_pIC50.csv`, summary statistics |
 | 6 — Molecular docking (6CM4) | [`06_docking_6CM4.ipynb`](06_docking_6CM4.ipynb) | `results/tables/top100_docking_results_*.csv`, poses under `docking/runs/` |
 | Docking validation | [`06_docking-comparisons.ipynb`](06_docking-comparisons.ipynb) | `results/tables/comparison_docking_results.csv` |
-| 6 — Counter-screen (5-HT2C) | [`08_docking_6bqh.ipynb`](08_docking_6bqh.ipynb) | `results/tables/5ht2c_docking_results_6qbh.csv` |
+| 6 — Counter-screen (5-HT2C) | [`08_docking_6bqh.ipynb`](08_docking_6bqh.ipynb) | `results/tables/5ht2c_docking_results_6bqh.csv` |
 | 7 — PAINS / unwanted substructure filtering | [`07_unwanted-substructures.ipynb`](07_unwanted-substructures.ipynb) | filtered shortlist (99 PAINS-free, 91 Brenk-clean of 100) |
 
 Steps 8, 9 and sanity check were performed in the group's separate working directory and are not reproducible from this folder.

@@ -1,8 +1,8 @@
 compound_id,compound_name,role,selection_rank,vina_score_kcal_mol,receptor,native_site_ligand,poses_file
-s_2230__9292524__16949512,Top hit 1,selected_hit,1,-10.371,6QBH,E2J,docking/runs/5ht2c_6qbh/s_2230__9292524__16949512/s_2230__9292524__16949512_poses.pdbqt
-s_2230__22865356__16949512,Top hit 2,selected_hit,2,-10.87,6QBH,E2J,docking/runs/5ht2c_6qbh/s_2230__22865356__16949512/s_2230__22865356__16949512_poses.pdbqt
-s_2230__22406464__9780156,Top hit 3,selected_hit,3,-10.911,6QBH,E2J,docking/runs/5ht2c_6qbh/s_2230__22406464__9780156/s_2230__22406464__9780156_poses.pdbqt
-s_2230__14793138__7471562,Top hit 4,selected_hit,4,-10.361,6QBH,E2J,docking/runs/5ht2c_6qbh/s_2230__14793138__7471562/s_2230__14793138__7471562_poses.pdbqt
-s_2230__14793138__23291970,Top hit 5,selected_hit,5,-9.847,6QBH,E2J,docking/runs/5ht2c_6qbh/s_2230__14793138__23291970/s_2230__14793138__23291970_poses.pdbqt
-RITANSERIN,Ritanserin,reference_ligand,,-12.146,6QBH,E2J,docking/runs/5ht2c_6qbh/RITANSERIN/RITANSERIN_poses.pdbqt
-RISPERIDONE,Risperidone,reference_ligand,,-11.611,6QBH,E2J,docking/runs/5ht2c_6qbh/RISPERIDONE/RISPERIDONE_poses.pdbqt
+s_2230__9292524__16949512,Top hit 1,selected_hit,1,-10.371,6BQH,E2J,docking/runs/5ht2c_6bqh/s_2230__9292524__16949512/s_2230__9292524__16949512_poses.pdbqt
+s_2230__22865356__16949512,Top hit 2,selected_hit,2,-10.87,6BQH,E2J,docking/runs/5ht2c_6bqh/s_2230__22865356__16949512/s_2230__22865356__16949512_poses.pdbqt
+s_2230__22406464__9780156,Top hit 3,selected_hit,3,-10.911,6BQH,E2J,docking/runs/5ht2c_6bqh/s_2230__22406464__9780156/s_2230__22406464__9780156_poses.pdbqt
+s_2230__14793138__7471562,Top hit 4,selected_hit,4,-10.361,6BQH,E2J,docking/runs/5ht2c_6bqh/s_2230__14793138__7471562/s_2230__14793138__7471562_poses.pdbqt
+s_2230__14793138__23291970,Top hit 5,selected_hit,5,-9.847,6BQH,E2J,docking/runs/5ht2c_6bqh/s_2230__14793138__23291970/s_2230__14793138__23291970_poses.pdbqt
+RITANSERIN,Ritanserin,reference_ligand,,-12.146,6BQH,E2J,docking/runs/5ht2c_6bqh/RITANSERIN/RITANSERIN_poses.pdbqt
+RISPERIDONE,Risperidone,reference_ligand,,-11.611,6BQH,E2J,docking/runs/5ht2c_6bqh/RISPERIDONE/RISPERIDONE_poses.pdbqt
