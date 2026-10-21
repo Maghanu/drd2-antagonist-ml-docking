@@ -2,6 +2,14 @@ cff-version: 1.2.0
 message: "If you use this project, please cite it as described here."
 title: "DRD2 Ligand Discovery"
 type: software
-authors:
-  - name: "DRD2 Ligand Discovery contributors"
+authors: 
+  - name: "Manu Pancras"
+    affiliation: "Leiden University"
+    email: "m.n.pancras@universiteitleiden.nl"
+  - name: "Bart Rabelink"
+    affiliation: "Leiden University"
+    email: "b.f.w.rabelink@universiteitleiden.nl"
+  - name: "Yunzhou Dong"
+    affiliation: "Leiden University"
+    email: "y.dong.7@umail.leidenuniv.nl"
 repository-code: "https://github.com/Maghanu/drd2-antagonist-ml-docking"
