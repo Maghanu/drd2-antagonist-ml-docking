@@ -1,4 +1,5 @@
-# Scaffold-guided in silico identification of dopamine D2 antagonists: potency prediction, docking, and an exploratory 5-HT2C counter-screen
+# In silico screening for dopamine D2 receptor antagonists
+QSAR potency prediction, docking, molecular dynamics, and an exploratory 5-HT2C counter screen
 
 **Group 6** — Manu Pancras, Bart Rabelink, Yunzhou Dong
 
