@@ -1,4 +1,4 @@
-# Balancing affinity and selectivity: in silico design of dopamine D2 antagonists with reduced off-target serotonergic binding
+# Scaffold-guided in silico identification of dopamine D2 antagonists: potency prediction, docking, and an exploratory 5-HT2C counter-screen
 
 **Group 6** — Manu Pancras, Bart Rabelink, Yunzhou Dong
 
