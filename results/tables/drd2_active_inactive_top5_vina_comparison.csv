@@ -1,0 +1,7 @@
+compound_id,compound_name,role,selection_rank,inactive_6CM4_Na_vina_score_kcal_mol,active_9BS9_vina_score_kcal_mol,active_minus_inactive_kcal_mol
+s_2230__9292524__16949512,Top hit 1,selected_hit,1,-10.797,-9.113,1.684
+s_2230__22865356__16949512,Top hit 2,selected_hit,2,-11.551,-9.705,1.846
+s_2230__22406464__9780156,Top hit 3,selected_hit,3,-11.056,-9.576,1.48
+s_2230__14793138__7471562,Top hit 4,selected_hit,4,-10.364,-9.093,1.271
+s_2230__14793138__23291970,Top hit 5,selected_hit,5,-10.515,-9.649,0.866
+RISPERIDONE,Risperidone,reference_ligand,,-11.22,-10.001,1.219

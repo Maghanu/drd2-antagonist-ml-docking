@@ -1,0 +1,13 @@
+compound_id,compound_name,role,selection_rank,receptor_state,receptor_pdb_id,native_site_ligand_component,vina_score_kcal_mol,poses_file
+s_2230__9292524__16949512,Top hit 1,selected_hit,1,inactive,6CM4_Na,8NU,-10.797,docking/runs/drd2_active_inactive_top5/inactive/s_2230__9292524__16949512/s_2230__9292524__16949512_poses.pdbqt
+s_2230__9292524__16949512,Top hit 1,selected_hit,1,active,9BS9,7LD,-9.113,docking/runs/drd2_active_inactive_top5/active/s_2230__9292524__16949512/s_2230__9292524__16949512_poses.pdbqt
+s_2230__22865356__16949512,Top hit 2,selected_hit,2,inactive,6CM4_Na,8NU,-11.551,docking/runs/drd2_active_inactive_top5/inactive/s_2230__22865356__16949512/s_2230__22865356__16949512_poses.pdbqt
+s_2230__22865356__16949512,Top hit 2,selected_hit,2,active,9BS9,7LD,-9.705,docking/runs/drd2_active_inactive_top5/active/s_2230__22865356__16949512/s_2230__22865356__16949512_poses.pdbqt
+s_2230__22406464__9780156,Top hit 3,selected_hit,3,inactive,6CM4_Na,8NU,-11.056,docking/runs/drd2_active_inactive_top5/inactive/s_2230__22406464__9780156/s_2230__22406464__9780156_poses.pdbqt
+s_2230__22406464__9780156,Top hit 3,selected_hit,3,active,9BS9,7LD,-9.576,docking/runs/drd2_active_inactive_top5/active/s_2230__22406464__9780156/s_2230__22406464__9780156_poses.pdbqt
+s_2230__14793138__7471562,Top hit 4,selected_hit,4,inactive,6CM4_Na,8NU,-10.364,docking/runs/drd2_active_inactive_top5/inactive/s_2230__14793138__7471562/s_2230__14793138__7471562_poses.pdbqt
+s_2230__14793138__7471562,Top hit 4,selected_hit,4,active,9BS9,7LD,-9.093,docking/runs/drd2_active_inactive_top5/active/s_2230__14793138__7471562/s_2230__14793138__7471562_poses.pdbqt
+s_2230__14793138__23291970,Top hit 5,selected_hit,5,inactive,6CM4_Na,8NU,-10.515,docking/runs/drd2_active_inactive_top5/inactive/s_2230__14793138__23291970/s_2230__14793138__23291970_poses.pdbqt
+s_2230__14793138__23291970,Top hit 5,selected_hit,5,active,9BS9,7LD,-9.649,docking/runs/drd2_active_inactive_top5/active/s_2230__14793138__23291970/s_2230__14793138__23291970_poses.pdbqt
+RISPERIDONE,Risperidone,reference_ligand,,inactive,6CM4_Na,8NU,-11.22,docking/runs/drd2_active_inactive_top5/inactive/RISPERIDONE/RISPERIDONE_poses.pdbqt
+RISPERIDONE,Risperidone,reference_ligand,,active,9BS9,7LD,-10.001,docking/runs/drd2_active_inactive_top5/active/RISPERIDONE/RISPERIDONE_poses.pdbqt
